@@ -5,9 +5,8 @@ React & Redux Simple Snippets can help you to build react-redux application fast
 ## VS Code API
 
 ### Contribution Points
-
-you can contribute here 
-
+ 
+you can contribute here
 
 ## USages
 
