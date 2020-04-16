@@ -1,0 +1,162 @@
+{
+	"React Funtional component": {
+		"prefix": "hrfc",
+		"body": [
+			"function ${1:Component}() {",
+			"  return (",
+			"    <div>",
+			"      $2",
+			"    </div>",
+			"  );",
+			"}"
+		],
+		"description": "React Funtional component"
+	},
+	"react Class Component": {
+		"prefix": "hrcc",
+		"body": [
+			"class ${1:className} extends React.Component {",
+			"  render() {",
+			"    return <h1>Hello, {this.props.name}</h1>;",
+			"  }",
+			"}"
+		],
+		"description": "React Class based Component"
+	},
+	"React constractor": {
+		"prefix": "hrccc",
+		"body": [
+			"  constractor(${1:props}){",
+			"    super(${1:props})",
+			"    $2",
+			"  }"
+		],
+		"description": "React Class constractor"
+	},
+	"ReactLifeCycle Component did mount": {
+		"prefix": "hrlcdm",
+		"body": [
+			"componentDidMount(){",
+			"    $1",
+			"}"
+		],
+		"description": "ReactLifeCycle Component did mount"
+	},
+	"ReactLifeCycle Component did Update": {
+		"prefix": "hrlcdu",
+		"body": [
+			"componentDidUpdate(prevProps){",
+			"    $1",
+			"}"
+		],
+		"description": "ReactLifeCycle Component did Update"
+	},
+	"Redux Map State To Props": {
+		"prefix": "hrdstp",
+		"body": [
+			"const mapStateToProps = (${1:state}) => {",
+			"  return {",
+			"    leads: ${1:state}.${2:reducer}.${3:data}",
+			"  }",
+			"}"
+		],
+		"description": "Redux Map State To Props"
+	},
+	"react export with redux": {
+		"prefix": "hrdex",
+		"body": [
+			"export default connect(mapStateToProps, {})(${1:className});"
+		],
+		"description": "react export with redux"
+	},
+	"Redux Store": {
+		"prefix": "hrdstore",
+		"body": [
+			"import { createStore, applyMiddleware } from \"redux\";",
+			"import { composeWithDevTools } from \"redux-devtools-extension\";",
+			"import thunk from \"redux-thunk\";",
+			"import rootReducer from \"${1:./reducers/rootReducer}\";",
+			"",
+			"const initialState = {};",
+			"const middlewares = [thunk];",
+			"",
+			"const store = createStore(",
+			"    rootReducer,",
+			"    initialState,",
+			"    composeWithDevTools(applyMiddleware(...middlewares))",
+			")",
+			"",
+			"export default store;"
+		],
+		"description": "Redux Store"
+	},
+	"Redux RootReducer": {
+		"prefix": "hrdrreducer",
+		"body": [
+			"import { combineReducers } from \"redux\";",
+			"",
+			"export default combineReducers({",
+			"  $1",
+			"});"
+		],
+		"description": "Redux RootReducer"
+	},
+	"Redux Reducer": {
+		"prefix": "hrdreducer",
+		"body": [
+			"",
+			"",
+			"const initialState = {",
+			"  leads: [],",
+			"};",
+			"",
+			"export default function (state = initialState, action) {",
+			"  switch (action.type) {",
+			"    case ${1:type}:",
+			"      return {",
+			"        ...state,",
+			"        $2",
+			"      };",
+			"    default:",
+			"      return state;",
+			"  }",
+			"}"
+		],
+		"description": "Redux Reducer"
+	},
+	"Redux Action": {
+		"prefix": "hrdaction",
+		"body": [
+			"import { ${1:Type} } from \"${2:../actions/types}\";",
+			"",
+			"export const ${3:Name}= (${4:param}) => {",
+			"  return {",
+			"    type: ${1:Type},",
+			"    payload: ${4:msg}$5,",
+			"  };",
+			"};"
+		],
+		"description": "Redux Action"
+	},
+	"Redux Thunk Action": {
+		"prefix": "hrdtaction",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export const ${1:name}= () => (dispatch) => {",
+			"  axios",
+			"    .${2|get,post,delete,put,head,patch,options,request|}(\"${3:apilocation}\")",
+			"    .then((res) => {",
+			"      dispatch({",
+			"        type: ${4:Type},",
+			"        payload: ${5:res.data},",
+			"      });",
+			"    })",
+			"    .catch((err) => {",
+			"      console.log(err);",
+			"    });",
+			"};"
+		],
+		"description": "Redux Thunk Action"
+	}
+}
