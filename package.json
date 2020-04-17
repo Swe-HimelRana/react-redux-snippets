@@ -1,26 +1,30 @@
 {
-	"name": "react-redux-snippets",
-	"displayName": "React & Redux simple Snippets",
-	"description": "React & Redux Simple Snippets can help you to build react-redux application faster",
-	"icon": "icon.png",
-	"version": "1.0.0",
-	"publisher": "Himel",
-	"engines": {
-		"vscode": "^1.28.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Swe-HimelRana/react-redux-snippets.git"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets.json"
-			}
-		]
-	}
+  "name": "react-redux-snippets",
+  "displayName": "React & Redux Snippets",
+  "description": "React & Redux Snippets can help you to build react-redux application faster",
+  "icon": "icon.png",
+  "version": "2.0.0",
+  "publisher": "Himel",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Swe-HimelRana/react-redux-snippets.git"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets.json"
+      }
+    ]
+  }
 }
